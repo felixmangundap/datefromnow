@@ -1,0 +1,225 @@
+/* Date From Now Styling Sheets */
+
+/* Color */
+
+$primary: #0bb;
+$secondary: #707070;
+$white: #fff;
+
+/* Typography */
+
+h1,
+p,
+a,
+input,
+select {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  margin: 0;
+  color: $secondary;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p,
+input,
+select {
+  font-size: 24px;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $primary;
+  color: $white;
+}
+
+/* Components */
+
+input {
+  padding: 0;
+}
+
+input, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: 5px;
+  background: none;
+  overflow: visible;
+  text-align: center;
+  text-align-last: center;
+  cursor: hand;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary;
+    color: $white;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+  }
+}
+
+/* Span */
+
+span.cyan {
+  color: $primary;
+}
+
+/* Main */
+
+.main {
+  height: 100vh;
+  padding: 25px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: linear-gradient($white 60%, $primary 140%);
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: $white;
+      margin-bottom: 5px;
+    }
+
+    a {
+      height: 25px;
+      
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      img {
+        height: 25px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* Date From Now */
+
+.dayCounter,
+.dateCounter {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 73px;
+
+  > *:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .counts {
+    color: $primary;
+  }
+
+  input,
+  select {
+    color: $primary;
+
+    &:hover,
+    &:focus, {
+      color: $white;
+      -webkit-transition: all 0.5s; /* Safari */
+      transition: all 0.5s;
+    }
+  }
+
+  input.days {
+    width: 60px;
+  }
+}
+
+/* Switcher */
+
+.counterSwitcher {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  .switcherGroup {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 18px;
+    }
+
+    a {
+      &.active {
+        color: $primary;
+        -webkit-transition: all 0.5s; /* Safari */
+        transition: all 0.5s;
+      }
+
+      &:hover,
+      &:focus {
+        color: $primary;
+        -webkit-transition: all 0.5s; /* Safari */
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  p,
+  input,
+  select {
+    font-size: 18px;
+  }
+
+  .dateCounter {
+    width: 425px;
+
+    > :first-child {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .dayCounter {
+    width: 475px;
+
+    .counts {
+      margin-top: 10px;
+    }
+  }
+}

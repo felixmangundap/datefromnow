@@ -1,0 +1,22 @@
+/* Custom Styling  */
+
+/* DayPicker */
+
+.DayPickerInput {
+  position: relative;
+}
+
+.DayPickerInput input {
+    width: 500px;
+}
+
+.DayPickerInput-OverlayWrapper {
+  position: absolute;
+  left: calc(50% - 154.5px);
+}
+
+@media screen and (max-width: 991px) {
+  .DayPickerInput input {
+    width: 400px;
+  }
+}
