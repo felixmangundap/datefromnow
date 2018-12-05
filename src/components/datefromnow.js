@@ -66,7 +66,7 @@ class DateFromNow extends React.Component {
       days,
       unit,
     } = this.state;
-
+console.log(style);
     return (
       <div className={style.dateCounter}>
         <DayPickerInput

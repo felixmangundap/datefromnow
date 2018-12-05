@@ -11,10 +11,10 @@ import * as style from  '../styles/style.module.scss'
 const Footer = () => (
   <div className={style.footer}>
     <p>made using</p>
-    <a href="https://www.gatsbyjs.org/" alt="gatsbyjs"><img alt="gatsby logo" src={gatsby} /></a>
-    <a href="https://reactjs.org/" alt="gatsbyjs"><img alt="react logo" src={react} /></a>
-    <a href="https://momentjs.com/" alt="gatsbyjs"><img alt="momentjs logo" src={momentjs} /></a>
-    <a href="https://sass-lang.com/" alt="gatsbyjs"><img alt="sass logo" src={sass} /></a>
+    <a href="https://www.gatsbyjs.org/" alt="gatsbyjs" className={style.gatsbyIcon}></a>
+    <a href="https://reactjs.org/" alt="reactjs" className={style.reactIcon}></a>
+    <a href="https://momentjs.com/" alt="momentjs" className={style.momentIcon}></a>
+    <a href="https://sass-lang.com/" alt="sass" className={style.sassIcon}></a>
   </div>
 )
 

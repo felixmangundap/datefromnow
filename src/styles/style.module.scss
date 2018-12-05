@@ -115,9 +115,50 @@ span.cyan {
 
     a {
       height: 25px;
+      width: 40px;
+      background-size: auto 25px;
+      background-repeat: no-repeat;
+      background-position: center;
       
       &:not(:last-child) {
         margin-right: 10px;
+      }
+
+      &:hover {
+        -webkit-transition: all 0.5s; /* Safari */
+        transition: all 0.5s;
+      }
+
+      &.gatsbyIcon {
+        background-image: url('../images/gatsby.svg');
+
+        &:hover {
+          background-image: url('../images/gatsby-blue.svg');
+        }
+      }
+
+      &.momentIcon {
+        background-image: url('../images/momentjs.svg');
+
+        &:hover {
+          background-image: url('../images/momentjs-blue.svg');
+        }
+      }
+
+      &.reactIcon {
+        background-image: url('../images/react.svg');
+
+        &:hover {
+          background-image: url('../images/react-blue.svg');
+        }
+      }
+
+      &.sassIcon {
+        background-image: url('../images/sass.svg');
+
+        &:hover {
+          background-image: url('../images/sass-blue.svg');
+        }
       }
 
       img {
