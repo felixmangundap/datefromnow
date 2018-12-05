@@ -20,3 +20,9 @@
     width: 400px;
   }
 }
+
+@media screen and (max-width: 479px) {
+  .DayPickerInput input {
+    width: 330px;
+  }
+}

@@ -22,8 +22,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'A simple yet complete date from now and days from now calculator' },
+            { name: 'keywords', content: 'days, date, days from now, date from now, 30 days from now, time, date calculator, day calculator, calculate days, calculate date, calendar' },
           ]}
         >
           <html lang="en" />

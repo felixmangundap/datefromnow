@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import moment from 'moment'
-import DayPicker from 'react-day-picker';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import {
   formatDate,
@@ -20,21 +18,6 @@ class DateFromNow extends React.Component {
     date: moment().format('dddd, MMMM D, YYYY'),
   }
 
-  componentDidMount() {
-    // this.intervalID = setInterval(
-    //   () => this.tick(),
-    //   1000
-    // );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
-  }
-
-  // tick() {
-  //   this.setState({ date: moment().format() });
-  // }
-
   updateMoment = () => {
     const {
       date,
@@ -45,13 +28,7 @@ class DateFromNow extends React.Component {
     this.setState({ days: isNaN(days) ? 0 : days });
   }
 
-  // onDateChange = (event) => {
-  //   const { value: date } = event.target;
-  //   this.setState({ date }, this.updateMoment);
-  // }
-
   onDateChange = (day) => {
-    console.log(day);
     this.setState({ date: day }, this.updateMoment);
   }
 
@@ -66,7 +43,7 @@ class DateFromNow extends React.Component {
       days,
       unit,
     } = this.state;
-console.log(style);
+
     return (
       <div className={style.dateCounter}>
         <DayPickerInput
@@ -93,14 +70,6 @@ console.log(style);
       </div>
     )
   }
-}
-
-DateFromNow.propTypes = {
-  
-}
-
-DateFromNow.defaultProps = {
-  
 }
 
 export default DateFromNow

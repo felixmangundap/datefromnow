@@ -62,8 +62,4 @@ Switcher.propTypes = {
   ]).isRequired,
 }
 
-Switcher.defaultProps = {
-  
-}
-
 export default Switcher

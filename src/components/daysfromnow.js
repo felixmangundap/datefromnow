@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import moment from 'moment'
 
@@ -11,21 +10,6 @@ class DaysFromNow extends React.Component {
     unit: 'days',
     date: moment().format('dddd, MMMM D, YYYY'),
   }
-
-  componentDidMount() {
-    // this.intervalID = setInterval(
-    //   () => this.tick(),
-    //   1000
-    // );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
-  }
-
-  // tick() {
-  //   this.setState({ date: moment().format() });
-  // }
 
   updateMoment = () => {
     const {
@@ -73,14 +57,6 @@ class DaysFromNow extends React.Component {
       </div>
     )
   }
-}
-
-DaysFromNow.propTypes = {
-  
-}
-
-DaysFromNow.defaultProps = {
-  
 }
 
 export default DaysFromNow

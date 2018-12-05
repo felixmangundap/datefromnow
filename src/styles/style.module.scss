@@ -120,6 +120,11 @@ span.cyan {
       background-repeat: no-repeat;
       background-position: center;
       
+      &:first-child {
+        margin-bottom: 5px;
+      }
+
+      &:not(:first-child),
       &:not(:last-child) {
         margin-right: 10px;
       }
@@ -158,6 +163,22 @@ span.cyan {
 
         &:hover {
           background-image: url('../images/sass-blue.svg');
+        }
+      }
+
+      &.netlifyIcon {
+        background-image: url('../images/netlify.svg');
+
+        &:hover {
+          background-image: url('../images/netlify-blue.svg');
+        }
+      }
+
+      &.githubIcon {
+        background-image: url('../images/github.svg');
+
+        &:hover {
+          background-image: url('../images/github-blue.svg');
         }
       }
 
@@ -258,6 +279,49 @@ span.cyan {
 
   .dayCounter {
     width: 475px;
+
+    .counts {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  h1,
+  p,
+  a,
+  input,
+  select {
+    letter-spacing: 3.5px;
+  }
+
+  p,
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  h1.header {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  #main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .dateCounter {
+    width: 350px;
+
+    > :first-child {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .dayCounter {
+    width: 300px;
 
     .counts {
       margin-top: 10px;
